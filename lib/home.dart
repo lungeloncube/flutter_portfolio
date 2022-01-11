@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:myapp/about.dart';
 import 'package:myapp/mobile_home.dart';
 import 'package:myapp/projects.dart';
 import 'package:myapp/theme_model.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   final dynamic mode;
@@ -64,56 +64,10 @@ class _HomePageState extends State<HomePage> {
                                 color: Colors.blue,
                                 size: 20,
                               ),
-                              Text("About"),
+                              Text("Profile"),
                             ],
                           ),
-                          Column(
-                            children: [
-                              CircleAvatar(
-                                  backgroundColor: Colors.grey,
-                                  radius: 60,
-                                  child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(45),
-                                      child:
-                                          Image.asset('assets/profile.png'))),
-                              Text('Lungelo Ncube',
-                                  style: TextStyle(fontSize: 30)),
-                              SizedBox(height: 20),
-                              Text('Flutter.Java\n Loves bae',
-                                  style: TextStyle(fontSize: 20)),
-                              SizedBox(height: 20),
-                              Row(
-                                children: [
-                                  OutlinedButton.icon(
-                                      style: OutlinedButton.styleFrom(
-                                          side: BorderSide.none),
-                                      label: Text("Github"),
-                                      onPressed: () {
-                                        _launchURL(
-                                            'https://github.com/lungeloncube?tab=repositories');
-                                      },
-                                      icon: SizedBox(
-                                          width: 20,
-                                          height: 20,
-                                          child: Image.asset(
-                                              'assets/github.png'))),
-                                  OutlinedButton.icon(
-                                      style: OutlinedButton.styleFrom(
-                                          side: BorderSide.none),
-                                      label: Text("LinkedIn"),
-                                      onPressed: () {
-                                        _launchURL(
-                                            'https://www.linkedin.com/in/lungelo-ncube-40a74b106?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be%2F8Dt08USkyhe0SkP79hDQ%3D%3D');
-                                      },
-                                      icon: SizedBox(
-                                          width: 20,
-                                          height: 20,
-                                          child: Image.asset(
-                                              'assets/linkedin.png'))),
-                                ],
-                              )
-                            ],
-                          ),
+                          About(),
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -144,12 +98,57 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
-
-  _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 }
+
+
+  // Column buildAbout() {
+  //   return Column(
+  //                         children: [
+  //                           CircleAvatar(
+  //                               backgroundColor: Colors.grey,
+  //                               radius: 60,
+  //                               child: ClipRRect(
+  //                                   borderRadius: BorderRadius.circular(45),
+  //                                   child:
+  //                                       Image.asset('assets/profile.png'))),
+  //                           Text('Lungelo Ncube',
+  //                               style: TextStyle(fontSize: 30)),
+  //                           SizedBox(height: 20),
+  //                           Text('Flutter.Java\n Loves bae',
+  //                               style: TextStyle(fontSize: 20)),
+  //                           SizedBox(height: 20),
+  //                           Row(
+  //                             children: [
+  //                               OutlinedButton.icon(
+  //                                   style: OutlinedButton.styleFrom(
+  //                                       side: BorderSide.none),
+  //                                   label: Text("Github"),
+  //                                   onPressed: () {
+  //                                     _launchURL(
+  //                                         'https://github.com/lungeloncube?tab=repositories');
+  //                                   },
+  //                                   icon: SizedBox(
+  //                                       width: 20,
+  //                                       height: 20,
+  //                                       child: Image.asset(
+  //                                           'assets/github.png'))),
+  //                               OutlinedButton.icon(
+  //                                   style: OutlinedButton.styleFrom(
+  //                                       side: BorderSide.none),
+  //                                   label: Text("LinkedIn"),
+  //                                   onPressed: () {
+  //                                     _launchURL(
+  //                                         'https://www.linkedin.com/in/lungelo-ncube-40a74b106?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Be%2F8Dt08USkyhe0SkP79hDQ%3D%3D');
+  //                                   },
+  //                                   icon: SizedBox(
+  //                                       width: 20,
+  //                                       height: 20,
+  //                                       child: Image.asset(
+  //                                           'assets/linkedin.png'))),
+  //                             ],
+  //                           )
+  //                         ],
+  //                       );
+  // }
+
+ 
