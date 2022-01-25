@@ -20,7 +20,6 @@ class About extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            color: Colors.grey[100],
             width: 500,
             child: const Text(
                 'Software developer with over two years experience in cross platform mobile application development. Knowledge in backend development using Java (using Spring boot framework) to build micro services. Excellent knowledge in website designing using JavaScript, HTML and CSS. Able to work in a fast-paced environment as part of an agile team',
@@ -30,7 +29,6 @@ class About extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         Container(
-          color: Colors.grey[100],
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

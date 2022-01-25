@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/home.dart';
+import 'package:myapp/mobile_home.dart';
 import 'package:myapp/theme_model.dart';
 
 void main() {
@@ -23,8 +24,10 @@ class MyApp extends StatelessWidget {
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: mode,
-           
-            home: HomePage(mode: mode, notifier: _notifier,),
+            home: MobileHome(
+              mode: mode,
+              notifier: _notifier,
+            ),
           );
         });
   }

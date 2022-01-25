@@ -6,41 +6,36 @@ class Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Projects portfolio'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Row(
-                children: const [
-                  ProjectTile(
-                    firstImage: 'assets/weather_first.jpg',
-                    secondImage: 'assets/weather_second.jpg',
-                    leading: 'assets/weather_app.png',
-                    subtitle: Text(
-                        "Weather App\nweather forecasting app to show weather forecast for an entire week"),
-                  ),
-                ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Row(
+            children: const [
+              ProjectTile(
+                firstImage: 'assets/weather_first.jpg',
+                secondImage: 'assets/weather_second.jpg',
+                leading: 'assets/weather_app.png',
+                subtitle: Text(
+                    "Weather App\nweather forecasting app to show weather forecast for an entire week"),
               ),
-              const SizedBox(height: 5),
-              Row(
-                children: const [
-                  ProjectTile(
-                    firstImage: 'assets/surfer_first.jpg',
-                    secondImage: 'assets/surfer_second.jpg',
-                    leading: 'assets/surfer_third.jpg',
-                    subtitle: Text(
-                        "Housing surfer\nHousing Surfer App\n Realestate app"),
-                  ),
-                ],
-              )
             ],
           ),
-        ));
+          const SizedBox(height: 5),
+          Row(
+            children: const [
+              ProjectTile(
+                firstImage: 'assets/surfer_first.jpg',
+                secondImage: 'assets/surfer_second.jpg',
+                leading: 'assets/surfer_third.jpg',
+                subtitle:
+                    Text("Housing surfer\nHousing Surfer App\n Realestate app"),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
 
