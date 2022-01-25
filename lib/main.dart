@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           final mode = model.mode;
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Lungelo Ncube',
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: mode,
